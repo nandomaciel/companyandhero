@@ -1,7 +1,7 @@
 # Company and Hero
 
 ## API
-[companyandhero](http://companyandhero.heroku.com/)
+[companyandhero](https://companyandhero.heroku.com/)
 
 ## Problema
 Eu como Dev Frontend na Company Hero, gostaria criar empresas com um formulário simples. Preciso saber quais dados enviar em JSON e para qual URL. A ideia é criar um diretório de empresas e seus funcionários, estes funcionários seriam os usuários da plataforma porem precisamos considerar que um usuário pode pertencer a mais de uma empresa.
