@@ -10,6 +10,9 @@ Eu como Dev Frontend na Company Hero, gostaria criar empresas com um formulário
 - Exibir funcionários na listagem das empresas
 - A busca por um funcionário utiliza o *filters* do Django Rest o que retornar usernames similares.
 
+## Testes
+- Foi feito um simples teste de criação de funcionario e de empresa
+
 ## Deploy
 
 Dependendo de como for utilizar é necessario modificar as configurações para o banco de dados.
@@ -66,8 +69,11 @@ _Em breve!_
 | /api/v1/funcionario/:id| PUT | Editar informações de um funcionário |
 | /api/v1/funcionario/:id| DELETE | Deletar um funcionário |
 
-- Buscar funcionário pelo username
-Para realizar a buscar por um usuário deve ser inserido o paramento _search_ e o valor (_username_) a ser pesquisado no enpoint funcionario
+- **Buscar funcionário pelo username**
+
+Para realizar a buscar por um usuário deve ser inserido o paramento _search_ e o valor (_username_) a ser pesquisado no enpoint api/v1/funcionario/
+
+---
 
 ## Modelo de JSON
 
@@ -87,7 +93,7 @@ Para realizar a buscar por um usuário deve ser inserido o paramento _search_ e 
 "username": "funcionariousername",
     "empresas": [
         {
-            "nome": "nome da empresa cadastrada"
+            "nome": "nome da empresa já cadastrada"
         }
     ]
 }
