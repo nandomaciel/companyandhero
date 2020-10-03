@@ -25,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'am_v%sw-n@myj(*^l7osz5b(o&#ahz39s=ikni96n%&6i8y$8^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['companyandhero.herokuapp.com']
+ALLOWED_HOSTS = ['companyandhero.herokuapp.com', "127.0.0.1"]
 
 
 # Application definition
@@ -39,6 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
+
+    'empresa',
+    'funcionario',
 ]
 
 MIDDLEWARE = [
@@ -115,6 +120,11 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+}
 
 
 # Static files (CSS, JavaScript, Images)
