@@ -6,7 +6,13 @@
 ## Problema
 Eu como Dev Frontend na Company Hero, gostaria criar empresas com um formulário simples. Preciso saber quais dados enviar em JSON e para qual URL. A ideia é criar um diretório de empresas e seus funcionários, estes funcionários seriam os usuários da plataforma porem precisamos considerar que um usuário pode pertencer a mais de uma empresa.
 
+## O que falta
+- Exibir funcionários na listagem das empresas
+- A busca por um funcionário utiliza o *filters* do Django Rest o que retornar usernames similares.
+
 ## Deploy
+
+Dependendo de como for utilizar é necessario modificar as configurações para o banco de dados.
 
 **Via CLI**
 
@@ -53,13 +59,15 @@ _Em breve!_
 | /api/v1/empresa/:id| GET | Informação de uma empresa |
 | /api/v1/empresa/:id| PUT | Editar informações de uma empresa |
 | /api/v1/empresa/:id| DELETE | Detelar informações uma empresa |
-|
+||||
 | /api/v1/funcionario/ | GET | Listar todos os funcionários cadastrados |
 | /api/v1/funcionario/ | GET | Cadastrar um funcionário |
 | /api/v1/funcionario/:id| GET | Informação de um funcionário |
 | /api/v1/funcionario/:id| PUT | Editar informações de um funcionário |
 | /api/v1/funcionario/:id| DELETE | Deletar um funcionário |
-| /api/v1/funcionario/?search=:string|GET | Buscar funcionário pelo userbane
+
+- Buscar funcionário pelo username
+Para realizar a buscar por um usuário deve ser inserido o paramento _search_ e o valor (_username_) a ser pesquisado no enpoint funcionario
 
 ## Modelo de JSON
 
@@ -88,6 +96,9 @@ _Em breve!_
 
 
 **Cadastrar empresa**
+
+**endpoint:** /api/v1/empresa/
+
 ``` json
 {
 "nome": "Google",
@@ -102,6 +113,9 @@ _Em breve!_
 ```
 
 **Cadastrar funcionário**
+
+**endpoint:** /api/v1/funcionario/
+
 _Cadastrando em uma única empresa_
 ``` json
 {
