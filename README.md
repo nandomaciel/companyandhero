@@ -43,6 +43,91 @@ Se todos os passos ocorreram sem apresentar nenhum erro. O projeto vai estar exe
 
 _Em breve!_
 
+---
 ## Endpoints
 
-_Em breve!_
+| Endpoint | Método | Ação |
+|--|--|--|
+| /api/v1/empresa/ | GET | Listar todas as empresas cadastradas |
+| /api/v1/empresa/ | GET | Cadastrar uma empresa |
+| /api/v1/empresa/:id| GET | Informação de uma empresa |
+| /api/v1/empresa/:id| PUT | Editar informações de uma empresa |
+| /api/v1/empresa/:id| DELETE | Detelar informações uma empresa |
+|
+| /api/v1/funcionario/ | GET | Listar todos os funcionários cadastrados |
+| /api/v1/funcionario/ | GET | Cadastrar um funcionário |
+| /api/v1/funcionario/:id| GET | Informação de um funcionário |
+| /api/v1/funcionario/:id| PUT | Editar informações de um funcionário |
+| /api/v1/funcionario/:id| DELETE | Deletar um funcionário |
+| /api/v1/funcionario/?search=:string|GET | Buscar funcionário pelo userbane
+
+## Modelo de JSON
+
+**Cadastrar empresa**
+``` json
+{
+"nome": "nome da empresa",
+"cnpj": "cnpj da empresa"
+}
+```
+
+**Cadastrar funcionário**
+
+``` json
+{
+"nome": "Nome do Funcionário",
+"username": "funcionariousername",
+    "empresas": [
+        {
+            "nome": "nome da empresa cadastrada"
+        }
+    ]
+}
+```
+## Exemplo de Modelo JSON
+
+
+**Cadastrar empresa**
+``` json
+{
+"nome": "Google",
+"cnpj": "12345"
+}
+```
+``` json
+{
+"nome": "Company Hero",
+"cnpj": "54321"
+}
+```
+
+**Cadastrar funcionário**
+_Cadastrando em uma única empresa_
+``` json
+{
+"nome": "Mark Down",
+"username": "md",
+    "empresas": [
+        {
+            "nome": "Google"
+        }
+    ]
+}
+```
+
+_Cadastrando em mais de uma empresa_
+
+``` json
+{
+"nome": "Java Script",
+"username": "js",
+    "empresas": [
+        {
+            "nome": "Google"
+        },
+        {
+            "nome": "Company Hero"
+        }
+    ]
+}
+```
