@@ -9,3 +9,6 @@ class Funcionario(models.Model):
 
     def __str__(self):
         return self.nome
+
+    def get_empresas(self):
+        return ", ".join([str(e) for e in self.empresas.all()])
